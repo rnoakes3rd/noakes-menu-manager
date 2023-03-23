@@ -1,0 +1,175 @@
+= 2.0.3 =
+
+* Fixed: Issue with script not loading.
+
+= 2.0.2 =
+
+* Added: Made sure the plugin works in WordPress 5.2
+* Improved: Various minor improvements
+
+= 2.0.1 =
+
+* Fixed: Nav menu functionality load
+
+= 2.0.0 =
+
+* Complete plugin overhaul
+
+= 1.7.4 =
+
+* Fixed: Widget AJAX issue
+
+= 1.7.3 =
+
+* Changed: Domain name
+
+= 1.7.2 =
+
+* Improved: Admin URL calls
+* Fixed: Help tabs output for AJAX calls
+
+= 1.7.1 =
+
+* Removed: Plugin activation hook. Forgot that isn't fired when the plugin is updated
+
+= 1.7.0 =
+
+* Added: Plugin activation hook
+* Added: New option to store menu collapsed states in user meta. By default, all menu items are collapsed unless this option is enabled
+* Improved: Help tab functionality and output
+* Improved: Various structural improvements
+
+= 1.6.0 =
+
+* Improved: Converted collapse/expand functionality to behave like [Nav Menu Collapse](https://wordpress.org/plugins/nav-menu-collapse/)
+* Fixed: Removed Essential Grid plugin meta box from the setting page
+
+= 1.5.4 =
+
+* Added: [Nav Menu Collapse](https://wordpress.org/plugins/nav-menu-collapse/) image
+* Fixed: Minor variable name issue
+
+= 1.5.3 =
+
+* Added: [Nav Menu Collapse](https://wordpress.org/plugins/nav-menu-collapse/) compatibility
+* Improved: Simplified object structure
+* Improved: Overhauled Gulp asset generation again
+* Improved: Various minor improvements
+
+= 1.5.2 =
+
+* Added: Made sure the plugin works in WordPress 4.9
+* Improved: Overhauled Gulp asset generation again
+* Fixed: Container bug on the NMM Menu widget
+
+= 1.5.1 =
+
+* Improved: Overhauled Gulp asset generation
+
+= 1.5.0 =
+
+* Added: Made sure the plugin works in WordPress 4.8
+* Improved: Asset generation and enqueueing
+* Improved: Optimized variable handling
+
+= 1.4.2 =
+
+* Changed: Optimized the generator form
+* Changed: Improved plugin update calls
+
+= 1.4.1 =
+
+* Fixed: Sanitization callbacks for earlier versions of WordPress
+* Fixed: Customizer preview function call for  earlier versions of WordPress
+* Fixed: Small issue with Custom Post Types UI styles that were affecting the generator form
+
+= 1.4.0 =
+
+* Added: Ability to remove help tabs entirely
+* Added: Fail-safe code output for menu stability
+* Added: Plugin settings sanitization
+* Added: **wp_nav_menu** code generator
+* Added: Item Spacing option for the NMM Menu widget
+* Added: **nmm_starts_with** and **nmm_ends_with** template functions
+* Added: Sourcemaps for compressed assets
+* Improved: Widget menus can now be selected by **theme_location**
+* Removed: Deprecated functionality
+
+= 1.3.0 =
+
+* Added: Gulp for simplified asset maintenance
+* Removed: Buttons action hook from the **Walker_Nav_Menu_Edit** class
+
+= 1.2.5 =
+
+* Deprecated: Buttons action hook in the **Walker_Nav_Menu_Edit** class for added compatibility
+
+= 1.2.4 =
+
+* Added: Made sure the plugin works in WordPress 4.7
+* Fixed: Child nav menu items now expand when the collapsed parent item is deleted
+* Fixed: Depth option in the **NMM Menu** widget
+
+= 1.2.3 =
+
+* Fixed: Working meta box fix for **Revolution Slider**
+
+= 1.2.2 =
+
+* Fixed: Meta box fix for **Revolution Slider**
+
+= 1.2.1 =
+
+* Fixed: Meta box fix for [qTranslate X](https://wordpress.org/plugins/qtranslate-x/)
+
+= 1.2.0 =
+
+* Added: Option to disabled help buttons
+* Added: AJAX action template function
+* Improved: Display name set to **Nav Menu Manager**
+* Improved: Nav menu widget for **WPML**
+* Improved: Moved uninstall options to the bottom of the settings page
+* Removed: Deprecated functionality
+
+= 1.1.2 =
+
+* Added: Empty nav menu option to the nav menu widget
+* Fixed: Issue that was preventing the custom fields from being displayed on new menu items
+
+= 1.1.1 =
+
+* Improved: Changed nav menu widget name to **NMM Menu**
+* Improved: Template function names now start with 'nmm'
+
+= 1.1.0 =
+
+* Added: Collapse/expand functionality to nav menus
+* Added: Help buttons for easier access to documentation
+* Improved: Moved all nav menus functionality to a separate class
+* Fixed: Made the plugin backward compatible with WordPress 3.8 and up
+
+= 1.0.4 =
+
+* Added: Improved nav menu sidebar widget
+* Added: Made sure the plugin works in WordPress 4.6
+* Fixed: Issue that was preventing custom fields from appearing in certain circumstances
+* Fixed: Made the plugin backward compatible with WordPress 4.0 and up
+
+= 1.0.3 =
+
+* Added: Removal of leading and trailing redundancies from custom fields
+* Fixed: Made the plugin backward compatible with WordPress 4.4 and up
+
+= 1.0.2 =
+
+* Added: Help tab to nav menus for custom fields
+* Added: Nav menus nonce for custom fields
+* Fixed: Issue that was preventing the custom fields from being displayed on new menu items
+
+= 1.0.1 =
+
+* Improved: Custom field action hook for plugin compatibility
+
+= 1.0.0 =
+
+* Initial release

@@ -1,0 +1,761 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nav Menu Manager\n"
+"POT-Creation-Date: 2023-03-23 10:23-0700\n"
+"PO-Revision-Date: 2020-05-07 14:37-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: noakes-menu-manager.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: includes/core/class-ajax.php:51
+msgid "Generator reset successfully."
+msgstr ""
+
+#: includes/core/class-ajax.php:57
+msgid "Settings saved successfully."
+msgstr ""
+
+#: includes/core/class-ajax.php:83
+msgid "You are not authorized to reset the generator."
+msgstr ""
+
+#: includes/core/class-ajax.php:87
+msgid "Generator could not be reset."
+msgstr ""
+
+#: includes/core/class-ajax.php:124
+msgid "You are not authorized to save settings."
+msgstr ""
+
+#: includes/core/class-ajax.php:128
+msgid "Settings could not be saved."
+msgstr ""
+
+#: includes/core/class-base.php:271
+#: includes/standalone/class-meta-box.php:340
+msgid "Support"
+msgstr ""
+
+#: includes/core/class-base.php:272
+msgid "Review"
+msgstr ""
+
+#: includes/core/class-base.php:273
+msgid "Translate"
+msgstr ""
+
+#: includes/core/class-base.php:274
+msgid "Donate"
+msgstr ""
+
+#: includes/core/class-cache.php:99 includes/core/class-cache.php:116
+#: includes/fields/class-field-nav-menus.php:103
+msgid "None"
+msgstr ""
+
+#: includes/core/class-cache.php:100
+msgid "EM Tag"
+msgstr ""
+
+#: includes/core/class-cache.php:101
+msgid "SPAN Tag"
+msgstr ""
+
+#: includes/core/class-cache.php:102
+msgid "STRONG Tag"
+msgstr ""
+
+#: includes/core/class-cache.php:117
+msgid "DIV Tag"
+msgstr ""
+
+#: includes/core/class-cache.php:118
+msgid "NAV Tag"
+msgstr ""
+
+#: includes/core/class-cache.php:144
+msgid "No Limit"
+msgstr ""
+
+#: includes/core/class-cache.php:178
+msgid "Preserve"
+msgstr ""
+
+#: includes/core/class-cache.php:179
+msgid "Discard"
+msgstr ""
+
+#: includes/core/class-generator.php:66 includes/core/class-generator.php:669
+msgid "Generator"
+msgstr ""
+
+#: includes/core/class-generator.php:557
+msgid "Code Output"
+msgstr ""
+
+#: includes/core/class-generator.php:563
+msgid "Generated wp_nav_menu code based on the selected options."
+msgstr ""
+
+#: includes/core/class-generator.php:565
+msgid "Theme Code"
+msgstr ""
+
+#: includes/core/class-generator.php:571 includes/core/class-settings.php:603
+msgid "WP Core"
+msgstr ""
+
+#: includes/core/class-generator.php:584 includes/core/class-settings.php:616
+msgid "Compressed"
+msgstr ""
+
+#: includes/core/class-generator.php:597 includes/core/class-settings.php:629
+msgid "Author Preference"
+msgstr ""
+
+#: includes/core/class-generator.php:613
+msgid "Generated shortcode based on the selected options."
+msgstr ""
+
+#: includes/core/class-generator.php:614
+msgid "Shortcode"
+msgstr ""
+
+#: includes/core/class-generator.php:620
+msgid "Reset Generator"
+msgstr ""
+
+#: includes/core/class-generator.php:627
+msgid "Theme Location"
+msgstr ""
+
+#: includes/core/class-generator.php:628
+msgid "Nav Menu"
+msgstr ""
+
+#: includes/core/class-generator.php:632
+msgid "Method for selecting the nav menu to generate code for."
+msgstr ""
+
+#: includes/core/class-generator.php:633
+msgid "Choose Menu By"
+msgstr ""
+
+#: includes/core/class-generator.php:645
+msgid "Select a nav menu..."
+msgstr ""
+
+#: includes/core/class-generator.php:654
+msgid "Whether to wrap the ul, and what to wrap it with."
+msgstr ""
+
+#: includes/core/class-generator.php:655
+msgid "Container"
+msgstr ""
+
+#: includes/core/class-generator.php:660
+msgid "Fallback Callback"
+msgstr ""
+
+#: includes/core/class-generator.php:661
+msgid "Exclude argument from output"
+msgstr ""
+
+#: includes/core/class-generator.php:662
+msgid "Include argument in output with default value"
+msgstr ""
+
+#: includes/core/class-generator.php:679
+msgid "Theme location to be used."
+msgstr ""
+
+#: includes/core/class-generator.php:697
+msgid "Select a theme location..."
+msgstr ""
+
+#: includes/core/class-generator.php:711
+msgid "Nav menu to be used."
+msgstr ""
+
+#: includes/core/class-generator.php:732
+msgid "CSS class to use for the ul element which forms the menu."
+msgstr ""
+
+#: includes/core/class-generator.php:733
+msgid "Menu Class(es)"
+msgstr ""
+
+#: includes/core/class-generator.php:739
+msgid "Default 'menu'."
+msgstr ""
+
+#: includes/core/class-generator.php:745
+msgid "The ID that is applied to the ul element which forms the menu."
+msgstr ""
+
+#: includes/core/class-generator.php:746
+msgid "Menu ID"
+msgstr ""
+
+#: includes/core/class-generator.php:751
+msgid "Default is the menu slug, incremented."
+msgstr ""
+
+#: includes/core/class-generator.php:759
+msgid "Class that is applied to the container."
+msgstr ""
+
+#: includes/core/class-generator.php:760
+msgid "Container Class(es)"
+msgstr ""
+
+#: includes/core/class-generator.php:766
+msgid "Default 'menu-{menu slug}-container'."
+msgstr ""
+
+#: includes/core/class-generator.php:786
+msgid "The ID that is applied to the container."
+msgstr ""
+
+#: includes/core/class-generator.php:787
+msgid "Container ID"
+msgstr ""
+
+#: includes/core/class-generator.php:807
+msgid ""
+"The aria-label attribute that is applied to the container when it's a nav "
+"element."
+msgstr ""
+
+#: includes/core/class-generator.php:808
+msgid "Container ARIA Label"
+msgstr ""
+
+#: includes/core/class-generator.php:828
+msgid "If the menu doesn't exist, a callback function will fire."
+msgstr ""
+
+#: includes/core/class-generator.php:839
+#, php-format
+msgid "Explicitly disable %s"
+msgstr ""
+
+#: includes/core/class-generator.php:847
+msgid "Tag wrapped around the link markup."
+msgstr ""
+
+#: includes/core/class-generator.php:848
+msgid "Before/After Link"
+msgstr ""
+
+#: includes/core/class-generator.php:855
+msgid "Tag wrapped around the link text."
+msgstr ""
+
+#: includes/core/class-generator.php:856
+msgid "Before/After Text"
+msgstr ""
+
+#: includes/core/class-generator.php:864
+msgid "Whether to echo the menu or return it."
+msgstr ""
+
+#: includes/core/class-generator.php:865
+msgid "Echo"
+msgstr ""
+
+#: includes/core/class-generator.php:871
+msgid "How many levels of the hierarchy are to be included."
+msgstr ""
+
+#: includes/core/class-generator.php:872
+msgid "Depth"
+msgstr ""
+
+#: includes/core/class-generator.php:879
+msgid "Instance of a custom walker class."
+msgstr ""
+
+#: includes/core/class-generator.php:880
+msgid "Walker"
+msgstr ""
+
+#: includes/core/class-generator.php:892
+msgid ""
+"How the list items should be wrapped. Uses printf() format with numbered "
+"placeholders."
+msgstr ""
+
+#: includes/core/class-generator.php:893
+msgid "Items Wrap"
+msgstr ""
+
+#: includes/core/class-generator.php:905
+msgid "Whether to preserve whitespace within the menu's HTML."
+msgstr ""
+
+#: includes/core/class-generator.php:906
+msgid "Item Spacing"
+msgstr ""
+
+#: includes/core/class-generator.php:913
+msgid "Generate Code"
+msgstr ""
+
+#: includes/core/class-nav-menus.php:226
+#: includes/core/class-nav-menus.php:374
+msgid "ID"
+msgstr ""
+
+#: includes/core/class-nav-menus.php:231
+#: includes/core/class-nav-menus.php:379
+msgid "Link ID"
+msgstr ""
+
+#: includes/core/class-nav-menus.php:236
+#: includes/core/class-nav-menus.php:384
+msgid "Link Class(es)"
+msgstr ""
+
+#: includes/core/class-nav-menus.php:241
+#: includes/core/class-nav-menus.php:389
+msgid "Query String"
+msgstr ""
+
+#: includes/core/class-nav-menus.php:246
+#: includes/core/class-nav-menus.php:394
+msgid "Hash"
+msgstr ""
+
+#: includes/core/class-settings.php:67
+msgid "Settings"
+msgstr ""
+
+#: includes/core/class-settings.php:273
+msgid "Widgets"
+msgstr ""
+
+#: includes/core/class-settings.php:276 includes/core/class-settings.php:407
+msgid "Nav Menus"
+msgstr ""
+
+#: includes/core/class-settings.php:353
+msgid "Save All Settings"
+msgstr ""
+
+#: includes/core/class-settings.php:361
+msgid "General Settings"
+msgstr ""
+
+#: includes/core/class-settings.php:368
+msgid "Disable the nav menu generator tool."
+msgstr ""
+
+#: includes/core/class-settings.php:369
+msgid "Disable Generator"
+msgstr ""
+
+#: includes/core/class-settings.php:375
+msgid "Make the '(Nav Menu Manager) Menu' widget available for sidebars."
+msgstr ""
+
+#: includes/core/class-settings.php:376
+msgid "Enable Widget"
+msgstr ""
+
+#: includes/core/class-settings.php:389
+msgid "Site Menus"
+msgstr ""
+
+#: includes/core/class-settings.php:396
+msgid ""
+"Nav menus added by the theme or another plugin. Use the checkboxes to "
+"disable nav menus that aren't in use."
+msgstr ""
+
+#: includes/core/class-settings.php:397
+msgid "Existing Nav Menus"
+msgstr ""
+
+#: includes/core/class-settings.php:403
+msgid "Add Nav Menu"
+msgstr ""
+
+#: includes/core/class-settings.php:404
+msgid "Nav menus to register for the site."
+msgstr ""
+
+#: includes/core/class-settings.php:425
+#: includes/fields/class-field-nav-menus.php:139
+msgid "Location"
+msgstr ""
+
+#: includes/core/class-settings.php:426
+msgid "Menu location identifier, like a slug."
+msgstr ""
+
+#: includes/core/class-settings.php:438
+#: includes/fields/class-field-nav-menus.php:140
+msgid "Description"
+msgstr ""
+
+#: includes/core/class-settings.php:439
+msgid "Menu description that is displayed in the dashboard."
+msgstr ""
+
+#: includes/core/class-settings.php:456
+msgid "Menu Settings"
+msgstr ""
+
+#: includes/core/class-settings.php:463
+msgid ""
+"If entered, this CSS class(es) will be added to all active nav menu items."
+msgstr ""
+
+#: includes/core/class-settings.php:464
+msgid "Active Class"
+msgstr ""
+
+#: includes/core/class-settings.php:471
+msgid "Remove default nav menu item IDs."
+msgstr ""
+
+#: includes/core/class-settings.php:472
+msgid "Exclude Default IDs"
+msgstr ""
+
+#: includes/core/class-settings.php:478
+msgid "Add an ID field to nav menu items."
+msgstr ""
+
+#: includes/core/class-settings.php:479
+msgid "Enable ID"
+msgstr ""
+
+#: includes/core/class-settings.php:485
+msgid "Add a Link ID field to nav menu items."
+msgstr ""
+
+#: includes/core/class-settings.php:486
+msgid "Enable Link ID"
+msgstr ""
+
+#: includes/core/class-settings.php:492
+msgid "Add a Link Class(es) field to nav menu items."
+msgstr ""
+
+#: includes/core/class-settings.php:493
+msgid "Enable Link Class(es)"
+msgstr ""
+
+#: includes/core/class-settings.php:499
+msgid "Add a query string field to nav menu items."
+msgstr ""
+
+#: includes/core/class-settings.php:500
+msgid "Enable Query String"
+msgstr ""
+
+#: includes/core/class-settings.php:506
+msgid "Add a hash field to nav menu items."
+msgstr ""
+
+#: includes/core/class-settings.php:507
+msgid "Enable Hash"
+msgstr ""
+
+#: includes/core/class-settings.php:520
+msgid "Uninstall Settings"
+msgstr ""
+
+#: includes/core/class-settings.php:595
+msgid ""
+"Add this code to the theme functions.php to prevent site menus from "
+"disappearing if the plugin is disabled or uninstalled."
+msgstr ""
+
+#: includes/core/class-settings.php:597
+msgid "Fail-safe Code"
+msgstr ""
+
+#: includes/core/class-settings.php:649
+#, php-format
+msgctxt "Plugin Name"
+msgid "Delete settings for %1$s when the plugin is uninstalled."
+msgstr ""
+
+#: includes/core/class-settings.php:653
+msgid "Delete Settings"
+msgstr ""
+
+#: includes/core/class-settings.php:664
+#, php-format
+msgctxt "Plugin Name"
+msgid "Delete post meta for %1$s when the plugin is uninstalled."
+msgstr ""
+
+#: includes/core/class-settings.php:668
+msgid "Delete Post Meta"
+msgstr ""
+
+#: includes/core/class-settings.php:679
+#, php-format
+msgctxt "Plugin Name"
+msgid "Delete user meta for %1$s when the plugin is uninstalled."
+msgstr ""
+
+#: includes/core/class-settings.php:683
+msgid "Delete User Meta"
+msgstr ""
+
+#: includes/fields/class-field-ajax-button.php:67
+msgid "Send"
+msgstr ""
+
+#: includes/fields/class-field-checkbox.php:150
+#, php-format
+msgctxt "Label"
+msgid "Confirm %1$s"
+msgstr ""
+
+#: includes/fields/class-field-code.php:96
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: includes/fields/class-field-nav-menus.php:84
+#, php-format
+msgid "Select %1$s"
+msgstr ""
+
+#: includes/fields/class-field-nav-menus.php:134
+msgid "All"
+msgstr ""
+
+#: includes/fields/class-field-nav-menus.php:141
+msgid "Assigned To"
+msgstr ""
+
+#: includes/fields/class-field-repeatable.php:58
+msgid "Add Item"
+msgstr ""
+
+#: includes/fields/class-field-submit.php:58
+msgid "Submit"
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:346
+#: includes/static/class-help.php:51
+msgid "Plugin developed by"
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:352
+msgid "Knowledge base available on"
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:358
+msgid "Running into issues with the plugin?"
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:359
+msgid "Submit a ticket."
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:364
+msgid "Have some feedback you'd like to share?"
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:365
+msgid "Provide a review."
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:370
+msgid "Want to see the plugin in your language?"
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:371
+msgid "Assist with translation."
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:376
+msgid "Would you like to support development?"
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:380
+#, php-format
+msgctxt "Donate Link"
+msgid ""
+"Sign up for WPEngine using the banner in the 'Better Hosting with "
+"WPEngine' meta box or %1$s."
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:381
+msgid "make a donation"
+msgstr ""
+
+#: includes/standalone/class-meta-box.php:393
+msgid "Better Hosting with WPEngine"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:38
+msgid "(Nav Menu Manager) Menu"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:44
+msgid "Add a nav menu to the sidebar."
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:196
+msgid "&mdash; Disabled &mdash;"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:209
+msgid "No nav menus have been created yet."
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:218
+msgid "Create a menu &raquo;"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:223
+msgid "Title:"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:224
+msgid "Theme Location:"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:231
+msgid "or Nav Menu:"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:232
+msgid "Menu Class(es):"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:233
+msgid "Menu ID:"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:234
+msgid "Container:"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:235
+msgid "Container Class(es):"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:236
+msgid "Container ID:"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:237
+msgid "Container ARIA Label:"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:238
+msgid "Before/After Link:"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:239
+msgid "Before/After Text:"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:240
+msgid "Depth:"
+msgstr ""
+
+#: includes/standalone/class-noakes-menu-widget.php:241
+msgid "Item Spacing:"
+msgstr ""
+
+#: includes/static/class-global.php:109
+msgid ""
+"The changes you made will be lost if you navigate away from this page."
+msgstr ""
+
+#: includes/static/class-global.php:110
+msgid "Please correct the validation error(s) and try again."
+msgstr ""
+
+#: includes/static/class-help.php:54
+msgid "Plugin Support"
+msgstr ""
+
+#: includes/static/class-help.php:55
+msgid "Review Plugin"
+msgstr ""
+
+#: includes/static/class-help.php:56
+msgid "Translate Plugin"
+msgstr ""
+
+#: includes/static/class-help.php:57
+msgid "Plugin Donation"
+msgstr ""
+
+#: includes/static/class-help.php:72
+msgid ""
+"For more information about this page, view the knowledge base article at:"
+msgstr ""
+
+#: includes/static/class-output.php:215
+#, php-format
+msgctxt "Required Field Label"
+msgid "%1$s [*]"
+msgstr ""
+
+#: includes/templates/repeatable-buttons.php:18
+msgid "Move Item"
+msgstr ""
+
+#: includes/templates/repeatable-buttons.php:25
+msgid "Move Item Up"
+msgstr ""
+
+#: includes/templates/repeatable-buttons.php:26
+msgid "Move Item Down"
+msgstr ""
+
+#: includes/templates/repeatable-buttons.php:27
+msgid "Insert Item Above"
+msgstr ""
+
+#: includes/templates/repeatable-buttons.php:28
+msgid "Remove Item"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Nav Menu Manager"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/noakes-menu-manager/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Simplifies nav menu maintenance and functionality providing more control "
+"over nav menus with less coding."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Robert Noakes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://robertnoakes.com/"
+msgstr ""
