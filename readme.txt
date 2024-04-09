@@ -3,9 +3,9 @@ Contributors: rnoakes3rd
 Donate link: https://www.paypal.com/donate?hosted_button_id=XNE7BREHR7BZQ&source=url
 Tags: active, code, convenient, custom, disable, fields, generator, hash, id, menus, nav, query, string
 Requires at least: 5.0
-Tested up to: 6.2
-Stable tag: 3.2.3
-Copyright: (c) 2016-2023 Robert Noakes (mr@robertnoakes.com)
+Tested up to: 6.5
+Stable tag: 3.2.4
+Copyright: (c) 2016-2024 Robert Noakes (mr@robertnoakes.com)
 License: GNU General Public License v3.0
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -73,6 +73,10 @@ Once the plugin is active, simply visit **Settings > Nav Menu Manager** and enab
 4. Improved nav menu widget
 
 == Changelog ==
+
+= 3.2.4 =
+
+* Verified: Functionality for WordPress 6.5
 
 = 3.2.3 =
 

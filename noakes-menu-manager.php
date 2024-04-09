@@ -3,12 +3,12 @@
  * Plugin Name: Nav Menu Manager
  * Plugin URI:  https://wordpress.org/plugins/noakes-menu-manager/
  * Description: Simplifies nav menu maintenance and functionality providing more control over nav menus with less coding.
- * Version:     3.2.3
+ * Version:     3.2.4
  * Author:      Robert Noakes
  * Author URI:  https://robertnoakes.com/
  * Text Domain: noakes-menu-manager
  * Domain Path: /languages/
- * Copyright:   (c) 2016-2023 Robert Noakes (mr@robertnoakes.com)
+ * Copyright:   (c) 2016-2024 Robert Noakes (mr@robertnoakes.com)
  * License:     GNU General Public License v3.0
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  */
