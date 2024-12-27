@@ -46,8 +46,8 @@ final class Noakes_Menu_Manager_Constants
 	 *
 	 * @var string
 	 */
-	const VERSION = '3.2.4';
-	const VERSION_PREVIOUS = '3.2.3';
+	const VERSION = '3.2.5';
+	const VERSION_PREVIOUS = '3.2.4';
 	
 	/**
 	 * Constants for code generation.
