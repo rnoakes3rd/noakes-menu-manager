@@ -27,19 +27,21 @@ final class Noakes_Menu_Manager_Global
 	 *
 	 * @var string
 	 */
-	const JQUERY_VALIDATE_VERSION = '1.19.3';
+	const JQUERY_VALIDATE_VERSION = '1.21.0';
 	
 	/**
 	 * Enqueue plugin assets.
 	 *
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.1.0 Added AJAX script options.
 	 * @since 3.0.0
 	 *
-	 * @access public static
-	 * @return void
+	 * @access	public static
 	 */
 	public static function admin_enqueue_scripts()
 	{
+		global $pagenow;
+		
 		wp_deregister_script('jquery-validation');
 		
 		wp_dequeue_script('jquery-validation');
@@ -51,14 +53,14 @@ final class Noakes_Menu_Manager_Global
 		? ''
 		: '.min';
 		
-		wp_enqueue_script('jquery-validation', $full_vendor_path . 'jquery-validation/jquery.validate' . $asset_suffix . '.js', array(), self::JQUERY_VALIDATE_VERSION, true);
+		wp_enqueue_script('jquery-validation', $full_vendor_path . 'jquery.validate' . $asset_suffix . '.js', array(), self::JQUERY_VALIDATE_VERSION, true);
 		
 		$home_url = home_url();
 		$vendor_path = str_replace($home_url, '', $full_vendor_path);
 		$locale = get_locale();
 		$locale_split = explode('_', $locale);
 		
-		$jquery_validation_path = $vendor_path . 'jquery-validation/localization/';
+		$jquery_validation_path = $vendor_path . 'localization/';
 		$jquery_validation_messages_file = $jquery_validation_path . 'messages_' . $locale . '.min.js';
 		$jquery_validation_messages_file_simple = $jquery_validation_path . 'messages_' . $locale_split[0] . '.min.js';
 
@@ -96,7 +98,7 @@ final class Noakes_Menu_Manager_Global
 
 			array
 			(
-				'admin_page' => $nmm->cache->admin_page,
+				'admin_page' => $pagenow,
 				'code_nav' => Noakes_Menu_Manager_Constants::CODE_NAV,
 				'component_id' => Noakes_Menu_Manager_Constants::COMPONENT_ID,
 				'noatices' => Noakes_Menu_Manager_Noatice::output(),
@@ -122,6 +124,7 @@ final class Noakes_Menu_Manager_Global
 	/**
 	 * Include the HTML templates in the admin footer.
 	 *
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.0.0
 	 *
 	 * @access public static
@@ -135,6 +138,7 @@ final class Noakes_Menu_Manager_Global
 
 		require($templates_path . 'repeatable-buttons.php');
 
+		//phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo Noakes_Menu_Manager_Utilities::clean_code(ob_get_clean());
 	}
 }

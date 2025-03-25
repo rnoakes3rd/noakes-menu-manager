@@ -68,6 +68,7 @@ final class Noakes_Menu_Manager_Output
 	/**
 	 * Output an admin form page.
 	 *
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.1.0 Changed admin page output.
 	 * @since 3.0.0
 	 *
@@ -79,6 +80,8 @@ final class Noakes_Menu_Manager_Output
 	 */
 	public static function admin_form_page($heading, $action = '', $option_name = '')
 	{
+		global $pagenow;
+		
 		$nmm = Noakes_Menu_Manager();
 		
 		echo '<div class="wrap">';
@@ -94,13 +97,13 @@ final class Noakes_Menu_Manager_Output
 		}
 
 		echo '<form method="post" id="nmm-form">'
-			. '<input name="admin-page" type="hidden" value="' . esc_attr($nmm->cache->admin_page) . '" />';
+			. '<input name="admin-page" type="hidden" value="' . esc_attr($pagenow) . '" />';
 		
 		if (!empty($action))
 		{
 			$action = sanitize_key($action);
 			
-			echo '<input name="action" type="hidden" value="' . $action . '" />';
+			echo '<input name="action" type="hidden" value="' . esc_attr($action) . '" />';
 			
 			wp_nonce_field($action);
 		}
@@ -114,7 +117,7 @@ final class Noakes_Menu_Manager_Output
 		wp_nonce_field('meta-box-order', 'meta-box-order-nonce', false);
 
 		echo '<div id="poststuff">'
-			. '<div id="post-body" class="metabox-holder columns-' . $columns . '">'
+			. '<div id="post-body" class="metabox-holder columns-' . esc_attr($columns) . '">'
 				. '<div id="postbox-container-1" class="postbox-container">';
 
 		do_meta_boxes($screen->id, 'side', '');
@@ -138,6 +141,7 @@ final class Noakes_Menu_Manager_Output
 	/**
 	 * Output the admin page nav bar.
 	 *
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.0.3 Removed secondary tab functionality.
 	 * @since 3.0.0
 	 *
@@ -153,7 +157,7 @@ final class Noakes_Menu_Manager_Output
 		echo '<div class="nmm-nav">'
 			. '<div class="nmm-nav-title">'
 				. '<h1>'
-					. '<strong>' . $nmm->cache->plugin_data['Name'] . '</strong> | ' . $heading
+					. '<strong>' . esc_html($nmm->cache->plugin_data['Name']) . '</strong> | ' . esc_html($heading)
 				. '</h1>'
 				. '<div class="nmm-clear"></div>'
 			. '</div>';
@@ -164,7 +168,7 @@ final class Noakes_Menu_Manager_Output
 
 			foreach (self::$_tabs as $tab)
 			{
-				echo '<a class="nmm-tab' . $tab['active_class'] . '" href="' . $tab['url'] . '">' . $tab['title'] . '</a>';
+				echo '<a class="nmm-tab' . esc_attr($tab['active_class']) . '" href="' . esc_url($tab['url']) . '">' . esc_html($tab['title']) . '</a>';
 			}
 
 			echo '</div>';

@@ -41,6 +41,7 @@ final class Noakes_Menu_Manager_Cache extends Noakes_Menu_Manager_Wrapper
 	/**
 	 * Get a default cached item based on the provided name.
 	 *
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.0.0
 	 *
 	 * @access protected
@@ -49,19 +50,10 @@ final class Noakes_Menu_Manager_Cache extends Noakes_Menu_Manager_Wrapper
 	 */
 	protected function _default($name)
 	{
+		global $page_now;
+		
 		switch ($name)
 		{
-			/**
-			 * Current admin page being used.
-			 *
-			 * @since 3.1.0
-			 *
-			 * @var string
-			 */
-			case 'admin_page':
-
-				return basename($_SERVER['SCRIPT_NAME']);
-				
 			/**
 			 * Path to the plugin assets folder.
 			 *
@@ -223,12 +215,14 @@ final class Noakes_Menu_Manager_Cache extends Noakes_Menu_Manager_Wrapper
 			/**
 			 * Current option name being used.
 			 *
+			 * @since 3.2.6 Security cleanup.
 			 * @since 3.1.0
 			 *
 			 * @var string
 			 */
 			case 'option_name':
 
+				//phpcs:disable WordPress.Security.NonceVerification.Recommended
 				return
 				(
 					isset($_GET['page'])
@@ -237,6 +231,7 @@ final class Noakes_Menu_Manager_Cache extends Noakes_Menu_Manager_Wrapper
 				)
 				? sanitize_key($_GET['page'])
 				: '';
+				//phpcs:enable
 
 			/**
 			 * General details about the plugin.

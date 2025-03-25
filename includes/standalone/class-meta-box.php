@@ -184,6 +184,7 @@ final class Noakes_Menu_Manager_Meta_Box extends Noakes_Menu_Manager_Wrapper
 	/**
 	 * Validate data associated with this meta box.
 	 *
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.2.0
 	 *
 	 * @access public
@@ -192,6 +193,7 @@ final class Noakes_Menu_Manager_Meta_Box extends Noakes_Menu_Manager_Wrapper
 	 */
 	public function validate_data($valid_data)
 	{
+		//phpcs:disable WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 		if
 		(
 			!empty($this->option_name)
@@ -206,6 +208,7 @@ final class Noakes_Menu_Manager_Meta_Box extends Noakes_Menu_Manager_Wrapper
 				$valid_data = array_merge_recursive($valid_data, $field->validate_data($_POST[$this->option_name]));
 			}
 		}
+		//phpcs:enable
 		
 		return $valid_data;
 	}

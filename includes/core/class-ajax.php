@@ -2,6 +2,7 @@
 /*!
  * AJAX functionality.
  *
+ * @since 3.2.6 Security cleanup.
  * @since 3.0.0
  *
  * @package    Nav Menu Manager
@@ -12,6 +13,8 @@ if (!defined('ABSPATH'))
 {
 	exit;
 }
+
+//phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotValidated
 
 /**
  * Class used to implement the AJAX functionality.
@@ -236,3 +239,5 @@ final class Noakes_Menu_Manager_AJAX extends Noakes_Menu_Manager_Wrapper
 		);
 	}
 }
+
+//phpcs:enable

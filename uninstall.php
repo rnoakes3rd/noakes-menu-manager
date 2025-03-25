@@ -2,6 +2,7 @@
 /*!
  * Functionality for plugin uninstallation.
  * 
+ * @since 3.2.6 Security cleanup.
  * @since 3.1.0 Added link ID and class(es) functionality and minor MySQL query cleanup.
  * @since 3.0.3 Added option unslashing.
  * @since 3.0.2 Improved condition and changed faux uninstall definition.
@@ -63,12 +64,13 @@ if
 	$settings[Noakes_Menu_Manager_Constants::SETTING_DELETE_USER_META]
 )
 {
+	//phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 	$wpdb->query($wpdb->prepare
 	(
 		"DELETE FROM 
 			$wpdb->usermeta 
 		WHERE 
-			meta_key LIKE %s;\n",
+			meta_key LIKE %s;",
 			
 		'%' . $wpdb->esc_like(Noakes_Menu_Manager_Constants::TOKEN) . '%'
 	));

@@ -198,6 +198,7 @@ final class Noakes_Menu_Manager extends Noakes_Menu_Manager_Wrapper
 	/**
 	 * Initialize the nav menus.
 	 *
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.2.0 Improved data validation.
 	 * @since 3.0.2 Improved conditions.
 	 * @since 3.0.0
@@ -209,6 +210,7 @@ final class Noakes_Menu_Manager extends Noakes_Menu_Manager_Wrapper
 	{
 		$this->cache->registered_nav_menus = get_registered_nav_menus();
 		
+		//phpcs:disable WordPress.Security.NonceVerification.Recommended
 		if
 		(
 			count($this->settings->disable) > 0
@@ -228,6 +230,7 @@ final class Noakes_Menu_Manager extends Noakes_Menu_Manager_Wrapper
 				}
 			}
 		}
+		//phpcs:enable
 
 		if (count($this->settings->menus) > 0)
 		{
@@ -280,6 +283,7 @@ final class Noakes_Menu_Manager extends Noakes_Menu_Manager_Wrapper
 	/**
 	 * Nav menu shortcode.
 	 * 
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.0.0
 	 * 
 	 * @access public
@@ -301,7 +305,10 @@ final class Noakes_Menu_Manager extends Noakes_Menu_Manager_Wrapper
 		
 		$atts['echo'] = false;
 
-		return wpautop(do_shortcode($content))
-		. wp_nav_menu($atts);
+		return wp_kses_post
+		(
+			wpautop(do_shortcode($content))
+			. wp_nav_menu($atts)
+		);
 	}
 }

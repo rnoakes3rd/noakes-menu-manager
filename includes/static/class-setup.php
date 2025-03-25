@@ -63,6 +63,7 @@ final class Noakes_Menu_Manager_Setup
 	/**
 	 * Clean up settings for plugin versions earlier than 3.0.0.
 	 * 
+	 * @since 3.2.6 Security cleanup.
  	 * @since 3.1.0 Minor MySQL query cleanup.
 	 * @since 3.0.3 Added option unslashing.
 	 * @since 3.0.0
@@ -76,6 +77,7 @@ final class Noakes_Menu_Manager_Setup
 	{
 		global $wpdb;
 		
+		//phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$wpdb->query($wpdb->prepare
 		(
 			"UPDATE 
@@ -83,7 +85,7 @@ final class Noakes_Menu_Manager_Setup
 			SET 
 				meta_key = %s 
 			WHERE 
-				meta_key = %s;\n",
+				meta_key = %s;",
 				
 			Noakes_Menu_Manager_Constants::POST_META_PREFIX . Noakes_Menu_Manager_Constants::POST_META_ID,
 			Noakes_Menu_Manager_Constants::POST_META_PREFIX . 'noakes_id'
@@ -109,11 +111,12 @@ final class Noakes_Menu_Manager_Setup
 			SET 
 				meta_key = %s 
 			WHERE 
-				meta_key = %s;\n",
+				meta_key = %s;",
 				
 			Noakes_Menu_Manager_Constants::POST_META_PREFIX . Noakes_Menu_Manager_Constants::POST_META_HASH,
 			Noakes_Menu_Manager_Constants::POST_META_PREFIX . 'noakes_anchor'
 		));
+		//phpcs:enable
 		
 		$plugin_settings = Noakes_Menu_Manager_Utilities::check_array(wp_unslash(get_option(Noakes_Menu_Manager_Constants::OPTION_SETTINGS)));
 		

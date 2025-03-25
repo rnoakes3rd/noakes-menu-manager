@@ -403,6 +403,7 @@ abstract class Noakes_Menu_Manager_Field extends Noakes_Menu_Manager_Wrapper
 	/**
 	 * Generate the output for the field.
 	 *
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.0.0
 	 *
 	 * @access protected
@@ -523,6 +524,7 @@ abstract class Noakes_Menu_Manager_Field extends Noakes_Menu_Manager_Wrapper
 			return $output;
 		}
 		
+		//phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo $output;
 	}
 	

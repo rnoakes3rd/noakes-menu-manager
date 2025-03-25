@@ -49,6 +49,7 @@ class Noakes_Menu_Widget extends WP_Widget
 	/**
 	 * Output the widget.
 	 * 
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.0.2 Improved condition.
 	 * @since 3.0.1 Added missing nav menu widget args.
 	 * @since 3.0.0
@@ -85,7 +86,7 @@ class Noakes_Menu_Widget extends WP_Widget
 			return;
 		}
 		
-		echo $args['before_widget'];
+		$output = $args['before_widget'];
 		
 		$title = (empty($instance['title']))
 		? ''
@@ -93,11 +94,12 @@ class Noakes_Menu_Widget extends WP_Widget
 
 		if (!empty($title))
 		{
-			echo $args['before_title'] . $title . $args['after_title'];
+			$output .= $args['before_title'] . $title . $args['after_title'];
 		}
 
 		$nav_menu_args = array
 		(
+			'echo' => false,
 			'menu' => $nav_menu,
 			'fallback_cb' => false
 		);
@@ -131,9 +133,10 @@ class Noakes_Menu_Widget extends WP_Widget
 			$nav_menu_args['after'] = '</' . $tag . '>';
 		}
 
-		wp_nav_menu(apply_filters('widget_nav_menu_args', $nav_menu_args, $nav_menu, $args, $instance));
-
-		echo $args['after_widget'];
+		$output .= wp_nav_menu(apply_filters('widget_nav_menu_args', $nav_menu_args, $nav_menu, $args, $instance))
+		. $args['after_widget'];
+		
+		echo wp_kses_post($output);
 	}
 
 	/**
@@ -180,6 +183,7 @@ class Noakes_Menu_Widget extends WP_Widget
 	/**
 	 * Output the widget form.
 	 * 
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.0.2 Removed escape from admin URL.
 	 * @since 3.0.0
 	 * 
@@ -204,21 +208,21 @@ class Noakes_Menu_Widget extends WP_Widget
 		? ''
 		: ' nmm-hidden';
 
-		echo '<div class="' . Noakes_Menu_Manager_Constants::COMPONENT_ID . '-wrapper">'
-			. '<p class="nav-menu-widget-no-menus-message' . $no_menus_message_class . '">'
-				. __('No nav menus have been created yet.', 'noakes-menu-manager') . '<br />'
+		echo '<div class="' . esc_attr(Noakes_Menu_Manager_Constants::COMPONENT_ID) . '-wrapper">'
+			. '<p class="nav-menu-widget-no-menus-message' . esc_attr($no_menus_message_class) . '">'
+				. esc_html__('No nav menus have been created yet.', 'noakes-menu-manager') . '<br />'
 				. sprintf
 				(
 					'<a href="%1$s">%2$s</a>',
 
 					($wp_customize instanceof WP_Customize_Manager)
 					? "javascript:wp.customize.panel('nav_menus').focus();"
-					: admin_url('nav-menus.php'),
+					: esc_url(admin_url('nav-menus.php')),
 
-					__('Create a menu &raquo;', 'noakes-menu-manager')
+					esc_html__('Create a menu &raquo;', 'noakes-menu-manager')
 				)
 				. '</p>'
-			. '<div class="nav-menu-widget-form-controls' . $form_controls_class . '">';
+			. '<div class="nav-menu-widget-form-controls' . esc_attr($form_controls_class) . '">';
 		
 		$this->_field_text($instance, __('Title:', 'noakes-menu-manager'), 'title');
 		$this->_field_select($instance, __('Theme Location:', 'noakes-menu-manager'), 'theme_location', array_merge($nav_menu_options, get_registered_nav_menus()));
@@ -247,6 +251,7 @@ class Noakes_Menu_Widget extends WP_Widget
 	/**
 	 * Output a widget select field.
 	 * 
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.0.0
 	 * 
 	 * @access private
@@ -266,8 +271,8 @@ class Noakes_Menu_Widget extends WP_Widget
 		$id = $this->get_field_id($field_name);
 
 		echo '<p>'
-			. '<label for="' . $id . '">' . $label . '</label> '
-			. '<select id="' . $id . '" name="' . $this->get_field_name($field_name) . '">';
+			. '<label for="' . esc_attr($id) . '">' . esc_html($label) . '</label> '
+			. '<select id="' . esc_attr($id) . '" name="' . esc_attr($this->get_field_name($field_name)) . '">';
 
 		foreach ($options as $option_value => $option_label)
 		{
@@ -281,6 +286,7 @@ class Noakes_Menu_Widget extends WP_Widget
 	/**
 	 * Output a widget text field.
 	 * 
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.0.0
 	 * 
 	 * @access private
@@ -299,8 +305,8 @@ class Noakes_Menu_Widget extends WP_Widget
 		$id = $this->get_field_id($field_name);
 
 		echo '<p>'
-			. '<label for="' . $id . '">' . $label . '</label>'
-			. '<input class="widefat" id="' . $id . '" name="' . $this->get_field_name($field_name) . '" type="text" value="' . esc_attr($value) . '" />'
+			. '<label for="' . esc_attr($id) . '">' . esc_html($label) . '</label>'
+			. '<input class="widefat" id="' . esc_attr($id) . '" name="' . esc_attr($this->get_field_name($field_name)) . '" type="text" value="' . esc_attr($value) . '" />'
 		. '</p>';
 	}
 }

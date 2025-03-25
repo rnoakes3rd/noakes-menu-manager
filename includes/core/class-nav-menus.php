@@ -250,6 +250,7 @@ final class Noakes_Menu_Manager_Nav_Menus extends Noakes_Menu_Manager_Wrapper
 	/**
 	 * Update custom field values for a nav menu item.
 	 * 
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.1.0 Added link ID and class(es) functionality.
 	 * @since 3.0.0
 	 * 
@@ -260,6 +261,7 @@ final class Noakes_Menu_Manager_Nav_Menus extends Noakes_Menu_Manager_Wrapper
 	 */
 	public function wp_update_nav_menu_item($menu_id, $menu_item_db_id)
 	{
+		//phpcs:disable WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 		if
 		(
 			!isset($_POST['update-nav-menu-nonce'])
@@ -355,6 +357,7 @@ final class Noakes_Menu_Manager_Nav_Menus extends Noakes_Menu_Manager_Wrapper
 		{
 			delete_post_meta($menu_item_db_id, '_menu_item_' . Noakes_Menu_Manager_Constants::POST_META_HASH);
 		}
+		//phpcs:enable
 	}
 
 	/**
@@ -526,6 +529,7 @@ final class Noakes_Menu_Manager_Nav_Menus extends Noakes_Menu_Manager_Wrapper
 	/**
 	 * Output a custom field.
 	 * 
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.0.0
 	 * 
 	 * @access private
@@ -536,10 +540,10 @@ final class Noakes_Menu_Manager_Nav_Menus extends Noakes_Menu_Manager_Wrapper
 	 */
 	private function _custom_field($name, $item_id, $label, $value)
 	{
-		echo '<p class="field-' . $name . ' description description-wide">'
-			. '<label for="edit-menu-item-' . $name . '-' . $item_id . '">'
-				. $label . '<br />'
-				. '<input class="widefat edit-menu-item-' . $name . '" id="edit-menu-item-' . $name . '-' . $item_id . '" name="menu-item-' . $name . '[' . $item_id . ']" type="text" value="' . esc_attr($value) . '" />'
+		echo '<p class="field-' . esc_attr($name) . ' description description-wide">'
+			. '<label for="edit-menu-item-' . esc_attr($name) . '-' . esc_attr($item_id) . '">'
+				. esc_html($label) . '<br />'
+				. '<input class="widefat edit-menu-item-' . esc_attr($name) . '" id="edit-menu-item-' . esc_attr($name) . '-' . esc_attr($item_id) . '" name="menu-item-' . esc_attr($name) . '[' . esc_attr($item_id) . ']" type="text" value="' . esc_attr($value) . '" />'
 			. '</label>'
 		. '</p>';
 	}

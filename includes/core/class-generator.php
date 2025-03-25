@@ -364,6 +364,7 @@ final class Noakes_Menu_Manager_Generator extends Noakes_Menu_Manager_Wrapper
 	/**
 	 * Prepare the generator form meta boxes.
 	 * 
+	 * @since 3.2.6 Security cleanup.
 	 * @since 3.2.0
 	 * 
 	 * @access public
@@ -521,7 +522,9 @@ final class Noakes_Menu_Manager_Generator extends Noakes_Menu_Manager_Wrapper
 					? $value
 					: "'" . esc_attr($value) . "'";
 					
+					//phpcs:ignore WordPressVIPMinimum.Security.ProperEscapingFunction.notAttrEscAttr
 					$theme_code .= "\t'" . esc_attr($name) . "' => " . esc_attr($value);
+					
 					$first_line = false;
 				}
 				
